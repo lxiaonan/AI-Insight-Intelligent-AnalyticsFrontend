@@ -14,7 +14,6 @@ export { TestBrowser } from './testBrowser';
 export const useServerInsertedHTML: Function = () => {};
 // plugins
 export { Access, useAccess, useAccessMarkedRoutes } from 'D:/frontEnd/BI/xnbi-frontend/src/.umi/plugin-access';
-export { addLocale, setLocale, getLocale, getIntl, useIntl, injectIntl, formatMessage, FormattedMessage, getAllLocales, FormattedDate, FormattedDateParts, FormattedDisplayName, FormattedHTMLMessage, FormattedList, FormattedNumber, FormattedNumberParts, FormattedPlural, FormattedRelativeTime, FormattedTime, FormattedTimeParts, IntlProvider, RawIntlProvider, SelectLang } from 'D:/frontEnd/BI/xnbi-frontend/src/.umi/plugin-locale';
 export { Provider, useModel } from 'D:/frontEnd/BI/xnbi-frontend/src/.umi/plugin-model';
 export { useRequest, UseRequestProvider, request, getRequestInstance } from 'D:/frontEnd/BI/xnbi-frontend/src/.umi/plugin-request';
 // plugins types.d.ts

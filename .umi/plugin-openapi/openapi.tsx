@@ -7,7 +7,7 @@
       import { SwaggerUIBundle } from 'swagger-ui-dist';
       import 'swagger-ui-dist/swagger-ui.css';
       const App = () => {
-        const [value, setValue] = useState("openapi" );
+        const [value, setValue] = useState("xnbi" );
         useEffect(() => {
           SwaggerUIBundle({
             url: `/umi-plugins_${value}.json`,
@@ -29,7 +29,7 @@
               }}
               onChange={(e) => setValue(e.target.value)}
             >
-              <option value="openapi">openapi</option>
+              <option value="xnbi">xnbi</option>
 <option value="swagger">swagger</option>
             </select>
             <div id="swagger-ui" />
