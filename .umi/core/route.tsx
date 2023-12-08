@@ -4,19 +4,22 @@
 import React from 'react';
 
 export async function getRoutes() {
-  const routes = {"1":{"path":"/user","layout":false,"id":"1"},"2":{"path":"/user/login","parentId":"1","id":"2"},"3":{"path":"/welcome","icon":"smile","parentId":"ant-design-pro-layout","id":"3"},"4":{"path":"/admin","icon":"crown","access":"canAdmin","parentId":"ant-design-pro-layout","id":"4"},"5":{"path":"/admin","redirect":"/admin/sub-page","parentId":"4","id":"5"},"6":{"path":"/admin/sub-page","parentId":"4","id":"6"},"7":{"icon":"table","path":"/list","parentId":"ant-design-pro-layout","id":"7"},"8":{"path":"/","redirect":"/welcome","parentId":"ant-design-pro-layout","id":"8"},"9":{"path":"*","layout":false,"id":"9"},"ant-design-pro-layout":{"id":"ant-design-pro-layout","path":"/","isLayout":true},"umi/plugin/openapi":{"path":"/umi/plugin/openapi","id":"umi/plugin/openapi"}} as const;
+  const routes = {"1":{"path":"/user","layout":false,"id":"1"},"2":{"path":"/user/login","parentId":"1","id":"2"},"3":{"path":"/user/register","parentId":"1","id":"3"},"4":{"path":"/","redirect":"/add_chart","parentId":"ant-design-pro-layout","id":"4"},"5":{"path":"/add_chart","name":"智能分析(同步)","icon":"barChart","parentId":"ant-design-pro-layout","id":"5"},"6":{"path":"/add_chart_async","name":"智能分析(异步)","icon":"barChart","parentId":"ant-design-pro-layout","id":"6"},"7":{"path":"/my_chart","name":"我的图表","icon":"fundOutlined","parentId":"ant-design-pro-layout","id":"7"},"8":{"path":"/admin","icon":"crown","access":"canAdmin","parentId":"ant-design-pro-layout","id":"8"},"9":{"path":"/admin","name":"管理页面","redirect":"/admin/sub-page","parentId":"8","id":"9"},"10":{"path":"/admin/sub-page","name":"管理页面2","parentId":"8","id":"10"},"11":{"path":"/","redirect":"/welcome","parentId":"ant-design-pro-layout","id":"11"},"12":{"path":"*","layout":false,"id":"12"},"ant-design-pro-layout":{"id":"ant-design-pro-layout","path":"/","isLayout":true},"umi/plugin/openapi":{"path":"/umi/plugin/openapi","id":"umi/plugin/openapi"}} as const;
   return {
     routes,
     routeComponents: {
 '1': React.lazy(() => import( './EmptyRoute')),
 '2': React.lazy(() => import(/* webpackChunkName: "p__User__Login__index" */'@/pages/User/Login/index.tsx')),
-'3': React.lazy(() => import(/* webpackChunkName: "p__Welcome" */'@/pages/Welcome.tsx')),
+'3': React.lazy(() => import(/* webpackChunkName: "p__User__Register__index" */'@/pages/User/Register/index.tsx')),
 '4': React.lazy(() => import( './EmptyRoute')),
-'5': React.lazy(() => import( './EmptyRoute')),
-'6': React.lazy(() => import(/* webpackChunkName: "p__Admin" */'@/pages/Admin.tsx')),
-'7': React.lazy(() => import(/* webpackChunkName: "p__TableList__index" */'@/pages/TableList/index.tsx')),
+'5': React.lazy(() => import(/* webpackChunkName: "p__AddChart__index" */'@/pages/AddChart/index.tsx')),
+'6': React.lazy(() => import(/* webpackChunkName: "p__AddChartAsync__index" */'@/pages/AddChartAsync/index.tsx')),
+'7': React.lazy(() => import(/* webpackChunkName: "p__MyChart__index" */'@/pages/MyChart/index.tsx')),
 '8': React.lazy(() => import( './EmptyRoute')),
-'9': React.lazy(() => import(/* webpackChunkName: "p__404" */'@/pages/404.tsx')),
+'9': React.lazy(() => import( './EmptyRoute')),
+'10': React.lazy(() => import(/* webpackChunkName: "p__Admin" */'@/pages/Admin.tsx')),
+'11': React.lazy(() => import( './EmptyRoute')),
+'12': React.lazy(() => import(/* webpackChunkName: "p__404" */'@/pages/404.tsx')),
 'ant-design-pro-layout': React.lazy(() => import(/* webpackChunkName: "umi__plugin-layout__Layout" */'D:/frontEnd/BI/xnbi-frontend/src/.umi/plugin-layout/Layout.tsx')),
 'umi/plugin/openapi': React.lazy(() => import(/* webpackChunkName: "umi__plugin-openapi__openapi" */'D:/frontEnd/BI/xnbi-frontend/src/.umi/plugin-openapi/openapi.tsx')),
 },

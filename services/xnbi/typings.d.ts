@@ -1,4 +1,16 @@
 declare namespace API {
+  type AIResultDto = {
+    chartData?: string;
+    chartId?: string;
+    onAnalysis?: string;
+  };
+
+  type BaseResponseAIResultDto_ = {
+    code?: number;
+    data?: AIResultDto;
+    message?: string;
+  };
+
   type BaseResponseBoolean_ = {
     code?: number;
     data?: boolean;
@@ -81,11 +93,14 @@ declare namespace API {
     chartData?: string;
     chartType?: string;
     createTime?: string;
+    execMessage?: string;
     genChart?: string;
     genResult?: string;
     goal?: string;
     id?: string;
     isDelete?: number;
+    name?: string;
+    state?: string;
     updateTime?: string;
     userId?: string;
   };
@@ -94,6 +109,7 @@ declare namespace API {
     chartData?: string;
     chartType?: string;
     goal?: string;
+    name?: string;
   };
 
   type ChartEditRequest = {
@@ -101,6 +117,7 @@ declare namespace API {
     chartType?: string;
     goal?: string;
     id?: string;
+    name?: string;
   };
 
   type ChartQueryRequest = {
@@ -109,6 +126,7 @@ declare namespace API {
     genResult?: string;
     goal?: string;
     id?: string;
+    name?: string;
     pageSize?: string;
     sortField?: string;
     sortOrder?: string;
@@ -120,6 +138,7 @@ declare namespace API {
     chartType?: string;
     goal?: string;
     id?: string;
+    name?: string;
   };
 
   type checkUsingGETParams = {
@@ -135,6 +154,23 @@ declare namespace API {
 
   type DeleteRequest = {
     id?: string;
+  };
+
+  type execUsingGETParams = {
+    /** name */
+    name?: string;
+  };
+
+  type genChartByAiAsyncUsingPOSTParams = {
+    chartType?: string;
+    goal?: string;
+    name?: string;
+  };
+
+  type genChartByAiUsingPOSTParams = {
+    chartType?: string;
+    goal?: string;
+    name?: string;
   };
 
   type getChartByIdUsingGETParams = {
