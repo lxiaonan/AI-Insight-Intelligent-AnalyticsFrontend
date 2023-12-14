@@ -32,6 +32,7 @@ const AddChart: React.FC = () => {
       file: undefined,
     };
     try {
+      console.log(values);
       const res = await genChartByAiUsingPost(params, {}, values.file.file.originFileObj);
       console.log(res);
       
@@ -40,7 +41,6 @@ const AddChart: React.FC = () => {
       } else {
         message.success('分析成功');
         const chartOption = JSON.parse(res.data.chartData ?? '');
-        console.log(123);
         
         console.log(chartOption  + " --------------- ");
         

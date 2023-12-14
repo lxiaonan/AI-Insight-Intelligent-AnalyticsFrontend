@@ -23,12 +23,6 @@ declare namespace API {
     message?: string;
   };
 
-  type BaseResponseInt_ = {
-    code?: number;
-    data?: number;
-    message?: string;
-  };
-
   type BaseResponseLoginUserVO_ = {
     code?: number;
     data?: LoginUserVO;
@@ -47,12 +41,6 @@ declare namespace API {
     message?: string;
   };
 
-  type BaseResponsePagePostVO_ = {
-    code?: number;
-    data?: PagePostVO_;
-    message?: string;
-  };
-
   type BaseResponsePageUser_ = {
     code?: number;
     data?: PageUser_;
@@ -62,12 +50,6 @@ declare namespace API {
   type BaseResponsePageUserVO_ = {
     code?: number;
     data?: PageUserVO_;
-    message?: string;
-  };
-
-  type BaseResponsePostVO_ = {
-    code?: number;
-    data?: PostVO;
     message?: string;
   };
 
@@ -141,23 +123,18 @@ declare namespace API {
     name?: string;
   };
 
-  type checkUsingGETParams = {
-    /** echostr */
-    echostr?: string;
-    /** nonce */
-    nonce?: string;
-    /** signature */
-    signature?: string;
-    /** timestamp */
-    timestamp?: string;
-  };
-
   type DeleteRequest = {
     id?: string;
   };
 
   type execUsingGETParams = {
     /** name */
+    name?: string;
+  };
+
+  type genChartByAiAsyncMqUsingPOSTParams = {
+    chartType?: string;
+    goal?: string;
     name?: string;
   };
 
@@ -174,11 +151,6 @@ declare namespace API {
   };
 
   type getChartByIdUsingGETParams = {
-    /** id */
-    id?: string;
-  };
-
-  type getPostVOByIdUsingGETParams = {
     /** id */
     id?: string;
   };
@@ -221,19 +193,6 @@ declare namespace API {
     total?: string;
   };
 
-  type PagePostVO_ = {
-    countId?: string;
-    current?: string;
-    maxLimit?: string;
-    optimizeCountSql?: boolean;
-    orders?: OrderItem[];
-    pages?: string;
-    records?: PostVO[];
-    searchCount?: boolean;
-    size?: string;
-    total?: string;
-  };
-
   type PageUser_ = {
     countId?: string;
     current?: string;
@@ -260,76 +219,13 @@ declare namespace API {
     total?: string;
   };
 
-  type PostAddRequest = {
-    content?: string;
-    tags?: string[];
-    title?: string;
-  };
-
-  type PostEditRequest = {
-    content?: string;
-    id?: string;
-    tags?: string[];
-    title?: string;
-  };
-
-  type PostFavourAddRequest = {
-    postId?: string;
-  };
-
-  type PostFavourQueryRequest = {
-    current?: string;
-    pageSize?: string;
-    postQueryRequest?: PostQueryRequest;
-    sortField?: string;
-    sortOrder?: string;
-    userId?: string;
-  };
-
-  type PostQueryRequest = {
-    content?: string;
-    current?: string;
-    favourUserId?: string;
-    id?: string;
-    notId?: string;
-    orTags?: string[];
-    pageSize?: string;
-    searchText?: string;
-    sortField?: string;
-    sortOrder?: string;
-    tags?: string[];
-    title?: string;
-    userId?: string;
-  };
-
-  type PostThumbAddRequest = {
-    postId?: string;
-  };
-
-  type PostUpdateRequest = {
-    content?: string;
-    id?: string;
-    tags?: string[];
-    title?: string;
-  };
-
-  type PostVO = {
-    content?: string;
-    createTime?: string;
-    favourNum?: number;
-    hasFavour?: boolean;
-    hasThumb?: boolean;
-    id?: string;
-    tagList?: string[];
-    thumbNum?: number;
-    title?: string;
-    updateTime?: string;
-    user?: UserVO;
-    userId?: string;
-  };
-
   type uploadFileUsingPOSTParams = {
     biz?: string;
+  };
+
+  type uploadImageAnalysisUsingPOSTParams = {
+    biz?: string;
+    goal?: string;
   };
 
   type User = {
