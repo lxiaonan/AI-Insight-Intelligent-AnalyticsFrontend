@@ -13,8 +13,8 @@ const Footer: React.FC = () => {
       copyright={`${currentYear} ${defaultMessage}`}
       links={[
         {
-          key: 'AI洞察-智能BI',
-          title: 'AI洞察-智能BI',
+          key: 'AI洞察-智能分析',
+          title: 'AI洞察-智能分析',
           href: 'https://pro.ant.design',
           blankTarget: true,
         },
@@ -25,8 +25,8 @@ const Footer: React.FC = () => {
           blankTarget: true,
         },
         {
-          key: 'AI洞察-智能BI',
-          title: 'AI洞察-智能BI',
+          key: 'AI洞察-智能分析',
+          title: 'AI洞察-智能分析',
           href: 'https://ant.design',
           blankTarget: true,
         },

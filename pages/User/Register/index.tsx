@@ -64,7 +64,7 @@ const Register: React.FC = () => {
             maxWidth: '75vw',
           }}
           logo={<img alt="logo" src="/logo.svg" />}
-          title="AI洞察-智能BI"
+          title="AI洞察-智能分析"
           subTitle={
             "智能洞察，决策无忧"
           }

@@ -6,11 +6,13 @@ import * as chartController from './chartController';
 import * as fileController from './fileController';
 import * as imageController from './imageController';
 import * as queueController from './queueController';
+import * as textController from './textController';
 import * as userController from './userController';
 export default {
   chartController,
   fileController,
   imageController,
   queueController,
+  textController,
   userController,
 };

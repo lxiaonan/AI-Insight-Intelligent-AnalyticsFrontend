@@ -86,7 +86,7 @@ export default (props: any) => {
   "fixedHeader": false,
   "fixSiderbar": true,
   "colorWeak": false,
-  "title": "AI洞察-智能BI",
+  "title": "AI洞察-智能分析",
   "pwa": true,
   "logo": "D:/frontEnd/BI/xnbi-frontend/public/logo.svg",
   "iconfontUrl": "",
